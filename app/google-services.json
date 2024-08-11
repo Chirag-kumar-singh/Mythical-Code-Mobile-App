@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "951198940170",
+    "project_id": "mythical-code-bba46",
+    "storage_bucket": "mythical-code-bba46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951198940170:android:0b695f5630b01c96c573f3",
+        "android_client_info": {
+          "package_name": "com.example.mythicalcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtW5Z5Jul-hbvCH5WKFRDWsCpsJnogXuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

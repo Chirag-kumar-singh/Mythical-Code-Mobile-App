@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaco Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/loader.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 100%;
+            height: calc(100vh - 40px); /* Adjust if you have other elements */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+    require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor/min/vs' } });
+    require(['vs/editor/editor.main'], function() {
+        var editor = monaco.editor.create(document.getElementById('container'), {
+            value: '// Write your code here...',
+            language: 'cpp'
+        });
+
+        // Force focus on click
+        document.getElementById('container').addEventListener('click', function() {
+            editor.focus();
+        });
+
+        // Function to send the code to Android
+        window.sendCodeToAndroid = function() {
+            var code = editor.getValue();
+            if (typeof Android !== 'undefined' && Android !== null) {
+                Android.sendCode(code);
+            }
+        }
+
+        // Ensure the editor resizes with the window
+        window.addEventListener('resize', function() {
+            editor.layout();
+        });
+    });
+</script>
+</body>
+</html>

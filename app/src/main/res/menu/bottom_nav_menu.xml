@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_code"
+        android:icon="@drawable/code"
+        android:title="Code" />
+    <item
+        android:id="@+id/navigation_practice"
+        android:icon="@drawable/practice"
+        android:title="Practice" />
+    <item
+        android:id="@+id/navigation_battle"
+        android:icon="@drawable/battle"
+        android:title="Battle" />
+</menu>
